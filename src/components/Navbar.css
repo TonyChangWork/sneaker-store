@@ -14,12 +14,14 @@
   border:none;
   outline:none;
   line-height:normal;
+  flex-wrap:nowrap;
 }
 
 .navbar-logo{
   font-size:22px;
   font-weight:700;
   letter-spacing:1px;
+  flex-shrink:0;
 }
 
 .nav-links{
@@ -29,6 +31,7 @@
   font-size:15px;
   margin:0;
   padding:0;
+  flex-shrink:0;
 }
 
 .nav-links li{
@@ -40,12 +43,18 @@
   color:#888;
 }
 
+.nav-links a{
+  color:white;
+  text-decoration:none;
+}
+
 .nav-icons{
   font-size:22px;
   display:flex;
-  gap:20px;
+  gap:16px;
   cursor:pointer;
   align-items:center;
+  flex-shrink:0;
 }
 
 .nav-icons a{
@@ -56,9 +65,52 @@
   align-items:center;
 }
 
-.nav-links a{
-  color:white;
-  text-decoration:none;
+.nav-login-btn {
+  padding: 7px 16px;
+  background: transparent;
+  color: white;
+  border: 1.5px solid rgba(255,255,255,0.6);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-login-btn:hover {
+  background: white;
+  color: black;
+  border-color: white;
+}
+
+.nav-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-username {
+  font-size: 13px;
+  color: white;
+  white-space: nowrap;
+}
+
+.nav-logout-btn {
+  padding: 6px 14px;
+  background: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 6px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-logout-btn:hover {
+  border-color: white;
 }
 
 @media (max-width: 768px) {
